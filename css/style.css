@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  /* height: 100vh; */
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 213, 255);
+  padding: 10px 20px;
+  position: sticky;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+header nav {
+  width: 30%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+header nav ul li a {
+  font-size: 25px;
+  color: black;
+}

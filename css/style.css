@@ -26,13 +26,14 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--second-color);
-  padding: 10px 20px;
-  position: fixed;
+  padding: 5px 20px;
 }
 
 header .logo img {
@@ -63,11 +64,37 @@ header nav ul li a:hover,
   border-radius: 5px;
 }
 
-header .icons a img {
-  padding: 15px;
-  cursor: pointer;
+header .icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 160px;
+  border-radius: 5px;
+  background-color: var(--main-color);
 }
 
-header .icons a img:hover {
+header .icons a i {
+  cursor: pointer;
+  color: var(--second-color);
+  font-size: 30px;
+}
+
+header .icons a i:hover {
   transform: scale(1.2);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--second-color);
+}
+
+.search form {
+  width: 25%;
+}
+
+.search form input[type="search"]{
+  padding: 10px;
+  width: 100%;
 }

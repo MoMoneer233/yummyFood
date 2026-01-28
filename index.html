@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="container">
         <div class="logo">
             <img src="assets/yummy_logo.png" alt="logo">
         </div>
@@ -28,25 +28,33 @@
                 <li><a href="">about</a></li>
             </ul>
         </nav>
-        <div class="icons">
-            <a>
-                <i class="fa-light fa-bag-shopping"></i>
-            </a>
-            <a>
-                <i class="fa-light fa-sun-bright"></i> </a>
-            <a>
-                <i class="fa-regular fa-user"></i>
-            </a>
-        </div>
-    </header>
-    <section class="search">
-        <form action="">
+        <form action="" class="search">
             <input type="search">
-            <input type="button" value="sreach">
+            <button><i class="search-icon fa-regular fa-search"></i></button>
         </form>
-    </section>
-
+        <i id="menu" class="fa-solid fa-bars"></i>
+    </header>
+    <nav id="mobileNav">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Categories</a></li>
+            <li><a href="">meals</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">about</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <a>
+            <i class="fa-light fa-bag-shopping"></i>
+        </a>
+        <a>
+            <i class="fa-light fa-sun-bright"></i> </a>
+        <a>
+            <i class="fa-regular fa-user"></i>
+        </a>
+    </div>
 </body>
-<script src="js/scripts.js"></script>
+<script src="js/scripts.js">
+</script>
 
 </html>

@@ -23,6 +23,12 @@
 
 body {
   font-family: "Marhey", sans-serif;
+  height: 5000px;
+}
+
+.container {
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
 header {
@@ -33,22 +39,17 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--second-color);
-  padding: 5px 20px;
+  padding-top: 10px;
 }
 
 header .logo img {
   width: 100px;
 }
 
-header nav {
-  width: 35%;
-}
-
 header nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row-reverse;
 }
 
 header nav ul li a {
@@ -63,38 +64,104 @@ header nav ul li a:hover,
   color: var(--second-color);
   border-radius: 5px;
 }
+#mobileNav {
+  display: none;
+  direction: rtl;
+  background-color: var(--main-color);
+  text-align: center;
+}
 
-header .icons {
+#mobileNav ul li {
+  padding: 5px 0;
+}
+
+#mobileNav ul li a {
+  font-size: 15px;
+  color: var(--second-color);
+}
+
+.showMobileNav {
+  display: block !important;
+}
+
+header #menu {
+  display: none;
+  font-size: 40px;
+  background-color: var(--main-color);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icons {
   display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 10px;
+  top: 100px;
   justify-content: space-between;
   padding: 10px;
-  width: 160px;
+  /* width: 160px; */
   border-radius: 5px;
   background-color: var(--main-color);
 }
 
-header .icons a i {
+.icons a i {
   cursor: pointer;
   color: var(--second-color);
   font-size: 30px;
 }
 
-header .icons a i:hover {
+.icons a i:hover {
   transform: scale(1.2);
 }
 
 .search {
   display: flex;
   justify-content: center;
-  padding: 10px;
   background-color: var(--second-color);
 }
 
-.search form {
-  width: 25%;
+.search {
+  width: 20%;
 }
 
-.search form input[type="search"]{
+.search input[type="search"] {
   padding: 10px;
-  width: 100%;
+  width: 80%;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: var(--main-color);
+  font-size: 20px;
+}
+
+.search button {
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  border-left: 1px black solid;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--main-color);
+}
+
+@media (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  header .logo img {
+    width: 80px;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .search {
+    width: 50%;
+  }
+  header #menu {
+    display: block;
+  }
+  .icons {
+    display: none;
+  }
 }
